@@ -1,5 +1,5 @@
 {
-    "name": "kitar/laravel-dynamodb",
+    "name": "nham24/laravel-dynamodb",
     "description": "A DynamoDB based Eloquent model and Query builder for Laravel.",
     "keywords": [
         "laravel",
@@ -12,6 +12,9 @@
     "authors": [
         {
             "name": "Satoshi Kita"
+        },
+        {
+            "name": "Sophy SEM"
         }
     ],
     "license": "MIT",
