@@ -1,9 +1,9 @@
 <?php
 
-namespace Kitar\Dynamodb\Query;
+namespace Nham24\Dynamodb\Query;
 
 use Aws\DynamoDb\Marshaler;
-use Kitar\Dynamodb\Helpers\NumberIterator;
+use Nham24\Dynamodb\Helpers\NumberIterator;
 
 class ExpressionAttributes
 {

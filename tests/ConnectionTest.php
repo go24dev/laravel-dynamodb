@@ -1,10 +1,10 @@
 <?php
 
-namespace Kitar\Dynamodb\Tests;
+namespace Nham24\Dynamodb\Tests;
 
 use Mockery as m;
-use Kitar\Dynamodb\Connection;
-use Kitar\Dynamodb\Query\Builder;
+use Nham24\Dynamodb\Connection;
+use Nham24\Dynamodb\Query\Builder;
 use Aws\DynamoDb\DynamoDbClient;
 use PHPUnit\Framework\TestCase;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;

@@ -1,14 +1,18 @@
 <?php
 
-namespace Kitar\Dynamodb\Tests\Model;
+namespace Nham2\Dynamodb\Tests\Model;
 
 use Aws\Result;
 use PHPUnit\Framework\TestCase;
 use Mockery as m;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use Illuminate\Database\ConnectionResolver;
-use Kitar\Dynamodb\Model\KeyMissingException;
+use Nham24\Dynamodb\Model\KeyMissingException;
 use BadMethodCallException;
+use Nham24\Dynamodb\Tests\Model\UserA;
+use Nham24\Dynamodb\Tests\Model\UserB;
+use Nham24\Dynamodb\Tests\Model\UserC;
+use Nham24\Dynamodb\Tests\Model\UserX;
 
 class ModelTest extends TestCase
 {
@@ -24,14 +28,14 @@ class ModelTest extends TestCase
         $connectionResolver = new ConnectionResolver;
         $connectionResolver->addConnection('dynamodb', $connection);
         $connectionResolver->setDefaultConnection('dynamodb');
-        UserA::setConnectionResolver($connectionResolver);
+        UserA ::setConnectionResolver($connectionResolver);
         UserB::setConnectionResolver($connectionResolver);
         UserC::setConnectionResolver($connectionResolver);
     }
 
     protected function newConnectionMock()
     {
-        $connection = m::mock('Kitar\Dynamodb\Connection[clientQuery]', [[]]);
+        $connection = m::mock('Nham24\Dynamodb\Connection[clientQuery]', [[]]);
 
         return $connection;
     }
@@ -182,7 +186,7 @@ class ModelTest extends TestCase
     /** @test */
     public function get_key_raise_exception_if_primary_key_is_not_defined()
     {
-        $user = new UserX;
+        $user = new UserX();
 
         $this->expectException(KeyMissingException::class);
         $this->expectExceptionMessage('Primary (Partition) key is not defined.');

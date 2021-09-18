@@ -1,6 +1,6 @@
 <?php
 
-namespace Kitar\Dynamodb\Model;
+namespace Nham24\Dynamodb\Model;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\UserProvider as BaseUserProvider;

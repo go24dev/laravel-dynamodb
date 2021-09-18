@@ -1,13 +1,13 @@
 <?php
 
-namespace Kitar\Dynamodb\Query;
+namespace Nham24\Dynamodb\Query;
 
 use Closure;
 use BadMethodCallException;
-use Kitar\Dynamodb\Connection;
-use Kitar\Dynamodb\Query\Grammar;
-use Kitar\Dynamodb\Query\Processor;
-use Kitar\Dynamodb\Query\ExpressionAttributes;
+use Nham24\Dynamodb\Connection;
+use Nham24\Dynamodb\Query\Grammar;
+use Nham24\Dynamodb\Query\Processor;
+use Nham24\Dynamodb\Query\ExpressionAttributes;
 use Illuminate\Support\Str;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Query\Builder as BaseBuilder;

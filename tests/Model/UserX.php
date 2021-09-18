@@ -1,8 +1,8 @@
 <?php
 
-namespace Kitar\Dynamodb\Tests\Model;
+namespace Nham24\Dynamodb\Tests\Model;
 
-use Kitar\Dynamodb\Model\Model;
+use Nham24\Dynamodb\Model\Model;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 

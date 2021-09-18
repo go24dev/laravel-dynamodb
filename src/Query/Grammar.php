@@ -1,10 +1,10 @@
 <?php
 
-namespace Kitar\Dynamodb\Query;
+namespace Nham24\Dynamodb\Query;
 
 use Aws\DynamoDb\Marshaler;
 use Illuminate\Support\Str;
-use Kitar\Dynamodb\Query\Builder;
+use Nham24\Dynamodb\Query\Builder;
 use Illuminate\Database\Query\Grammars\Grammar as BaseGrammer;
 
 class Grammar extends BaseGrammer

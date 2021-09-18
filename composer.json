@@ -39,18 +39,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Kitar\\Dynamodb\\": "src/Kitar/Dynamodb/"
+            "Nham24\\Dynamodb\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kitar\\Dynamodb\\Tests\\": "tests/"
+            "Nham24\\Dynamodb\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Kitar\\Dynamodb\\DynamodbServiceProvider"
+                "Nham24\\Dynamodb\\DynamodbServiceProvider"
             ]
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kitar\Dynamodb\Model;
+namespace Nham24\Dynamodb\Model;
 
 use RuntimeException;
 
