@@ -1,6 +1,6 @@
 <?php
 
-namespace Kitar\Dynamodb;
+namespace Nham24\Dynamodb;
 
 use Aws\Sdk as AwsSdk;
 use Aws\DynamoDb\DynamoDbClient;

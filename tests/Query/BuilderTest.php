@@ -1,15 +1,15 @@
 <?php
 
-namespace Kitar\Dynamodb\Tests\Query;
+namespace Nham24\Dynamodb\Tests\Query;
 
 use Aws\Result;
 use BadMethodCallException;
 use Mockery as m;
-use Kitar\Dynamodb\Connection;
-use Kitar\Dynamodb\Model\Model;
-use Kitar\Dynamodb\Query\Builder;
-use Kitar\Dynamodb\Query\Grammar;
-use Kitar\Dynamodb\Query\Processor;
+use Nham24\Dynamodb\Connection;
+use Nham24\Dynamodb\Model\Model;
+use Nham24\Dynamodb\Query\Builder;
+use Nham24\Dynamodb\Query\Grammar;
+use Nham24\Dynamodb\Query\Processor;
 use PHPUnit\Framework\TestCase;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 

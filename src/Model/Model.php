@@ -1,9 +1,9 @@
 <?php
 
-namespace Kitar\Dynamodb\Model;
+namespace Nham24\Dynamodb\Model;
 
 use Illuminate\Database\Eloquent\Model as BaseModel;
-use Kitar\Dynamodb\Model\KeyMissingException;
+use Nham24\Dynamodb\Model\KeyMissingException;
 
 class Model extends BaseModel
 {

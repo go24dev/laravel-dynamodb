@@ -1,6 +1,6 @@
 <?php
 
-namespace Kitar\Dynamodb;
+namespace Nham24\Dynamodb;
 
 use Illuminate\Support\ServiceProvider;
 

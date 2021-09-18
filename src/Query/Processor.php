@@ -1,6 +1,6 @@
 <?php
 
-namespace Kitar\Dynamodb\Query;
+namespace Nham24\Dynamodb\Query;
 
 use Aws\Result;
 use Aws\DynamoDb\Marshaler;

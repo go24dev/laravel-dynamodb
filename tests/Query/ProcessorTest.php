@@ -1,10 +1,10 @@
 <?php
 
-namespace Kitar\Dynamodb\Tests\Query;
+namespace Nham24\Dynamodb\Tests\Query;
 
 use Aws\Result;
-use Kitar\Dynamodb\Model\Model;
-use Kitar\Dynamodb\Query\Processor;
+use Nham24\Dynamodb\Model\Model;
+use Nham24\Dynamodb\Query\Processor;
 use PHPUnit\Framework\TestCase;
 
 class User extends Model
