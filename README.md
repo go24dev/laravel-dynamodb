@@ -1,58 +1,62 @@
 # Laravel DynamoDB
 
-[![test](https://github.com/kitar/laravel-dynamodb/workflows/test/badge.svg)](https://github.com/kitar/laravel-dynamodb/actions)
-[![codecov](https://codecov.io/gh/kitar/laravel-dynamodb/branch/master/graph/badge.svg)](https://codecov.io/gh/kitar/laravel-dynamodb/branch/master)
+> This package is just a fork of [kitar/laravel-dynamodb](https://github.com/kitar/laravel-dynamodb) to support laravel 5.8. If your project is using laravel 6+, you should use [kitar/laravel-dynamodb](https://github.com/kitar/laravel-dynamodb) instead.
+
+[![test](https://github.com/go24dev/laravel-dynamodb/workflows/test/badge.svg)](https://github.com/go24dev/laravel-dynamodb/actions)
+[![codecov](https://codecov.io/gh/go24dev/laravel-dynamodb/branch/master/graph/badge.svg)](https://codecov.io/gh/go24dev/laravel-dynamodb/branch/master)
 
 A DynamoDB based Eloquent model and Query builder for Laravel.
 
-- [Motivation](#motivation)
-- [Installation](#installation)
-  * [Laravel](#laravel)
-  * [Non-Laravel projects](#non-laravel-projects)
-- [Sample data](#sample-data)
-- [Model](#model)
-  * [Extending the base model](#extending-the-base-model)
-  * [Basic Usage](#basic-usage)
-    + [Retrieving all models](#retrieving-all-models)
-    + [Retrieving a model](#retrieving-a-model)
-    + [save()](#save)
-    + [update()](#update)
-    + [delete()](#delete)
-    + [increment() / decrement()](#increment--decrement)
-  * [Advanced Queries](#advanced-queries)
-- [Authentication with model](#authentication-with-model)
-  * [Register custom user provider](#register-custom-user-provider)
-  * [Change auth config](#change-auth-config)
-- [Query Builder](#query-builder)
-  * [Basic Usage](#basic-usage-1)
-    + [getItem()](#getitem)
-    + [putItem()](#putitem)
-    + [updateItem()](#updateitem)
-    + [deleteItem()](#deleteitem)
-  * [Projection Expressions](#projection-expressions)
-    + [select()](#select)
-  * [Condition Expressions](#condition-expressions)
-    + [condition()](#condition)
-    + [conditionIn()](#conditionin)
-    + [conditionBetween()](#conditionbetween)
-  * [Working with Queries](#working-with-queries)
-    + [query() and keyCondition()](#query-and-keycondition)
-    + [keyConditionBetween()](#keyconditionbetween)
-  * [Working with Scans](#working-with-scans)
-    + [scan()](#scan)
-  * [Filtering the Results](#filtering-the-results)
-    + [filter()](#filter)
-    + [filterIn()](#filterin)
-    + [filterBetween()](#filterbetween)
-  * [Paginating the Results](#paginating-the-results)
-    + [exclusiveStartKey()](#exclusivestartkey)
-  * [Using Global Secondary Indexes](#using-global-secondary-indexes)
-    + [index()](#index)
-  * [Atomic Counter](#atomic-counter)
-  * [DynamoDB-specific operators for condition() and filter()](#dynamodb-specific-operators-for-condition-and-filter)
-    + [Comparators](#comparators)
-    + [functions](#functions)
-- [Testing](#testing)
+- [Laravel DynamoDB](#laravel-dynamodb)
+  - [Motivation](#motivation)
+  - [Installation](#installation)
+    - [Laravel](#laravel)
+    - [Non-Laravel projects](#non-laravel-projects)
+  - [Sample data](#sample-data)
+  - [Model](#model)
+    - [Extending the base model](#extending-the-base-model)
+    - [Basic Usage](#basic-usage)
+      - [Retrieving all models](#retrieving-all-models)
+      - [Retrieving a model](#retrieving-a-model)
+      - [save()](#save)
+      - [update()](#update)
+      - [delete()](#delete)
+      - [increment() / decrement()](#increment--decrement)
+    - [Advanced Queries](#advanced-queries)
+  - [Authentication with model](#authentication-with-model)
+    - [Register custom user provider](#register-custom-user-provider)
+    - [Change auth config](#change-auth-config)
+    - [Registration Controller](#registration-controller)
+  - [Query Builder](#query-builder)
+    - [Basic Usage](#basic-usage-1)
+      - [getItem()](#getitem)
+      - [putItem()](#putitem)
+      - [updateItem()](#updateitem)
+      - [deleteItem()](#deleteitem)
+    - [Projection Expressions](#projection-expressions)
+      - [select()](#select)
+    - [Condition Expressions](#condition-expressions)
+      - [condition()](#condition)
+      - [conditionIn()](#conditionin)
+      - [conditionBetween()](#conditionbetween)
+    - [Working with Queries](#working-with-queries)
+      - [query() and keyCondition()](#query-and-keycondition)
+      - [keyConditionBetween()](#keyconditionbetween)
+    - [Working with Scans](#working-with-scans)
+      - [scan()](#scan)
+    - [Filtering the Results](#filtering-the-results)
+      - [filter()](#filter)
+      - [filterIn()](#filterin)
+      - [filterBetween()](#filterbetween)
+    - [Paginating the Results](#paginating-the-results)
+      - [exclusiveStartKey()](#exclusivestartkey)
+    - [Using Global Secondary Indexes](#using-global-secondary-indexes)
+      - [index()](#index)
+    - [Atomic Counter](#atomic-counter)
+    - [DynamoDB-specific operators for condition() and filter()](#dynamodb-specific-operators-for-condition-and-filter)
+      - [Comparators](#comparators)
+      - [functions](#functions)
+  - [Testing](#testing)
 
 ## Motivation
 
@@ -69,12 +73,12 @@ A DynamoDB based Eloquent model and Query builder for Laravel.
 Install the package via Composer:
 
 ```
-$ composer require kitar/laravel-dynamodb
+$ composer require nham24/laravel-dynamodb
 ```
 
 ### Laravel
 
-> We only support Laravel 6+.
+> We only support Laravel >= 5.8.
 
 Add dynamodb configs to config/database.php:
 
