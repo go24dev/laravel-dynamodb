@@ -350,6 +350,7 @@ class Model extends BaseModel
             "keyCondition",
             "keyConditionIn",
             "keyConditionBetween",
+            "scanIndexForward"
         ];
 
         if (in_array($method, ['increment', 'decrement'])) {

@@ -102,6 +102,8 @@ class Builder extends BaseBuilder
      */
     protected $key_condition_query;
 
+    public $scan_index_forward;
+
     /**
      * Create a new query builder instance.
      *
@@ -126,6 +128,7 @@ class Builder extends BaseBuilder
             $this->initializeDedicatedQueries();
         }
     }
+
 
     /**
      * Set the index name.
@@ -177,6 +180,20 @@ class Builder extends BaseBuilder
         $this->consistent_read = $active;
 
         return $this;
+    }
+
+    /**
+     * Set the ScanIndexForward option
+     *
+     * @param boolean $active
+     * @return void
+     */
+    public function scanIndexForward($active = true){
+
+        $this->scan_index_forward = $active;
+
+        return $this;
+
     }
 
     /**
@@ -523,6 +540,7 @@ class Builder extends BaseBuilder
             $this->grammar->compileItem($this->item),
             $this->grammar->compileUpdates($this->updates),
             $this->grammar->compileDynamodbLimit($this->limit),
+            $this->grammar->compileScanIndexForward($this->scan_index_forward),
             $this->grammar->compileExclusiveStartKey($this->exclusive_start_key),
             $this->grammar->compileConsistentRead($this->consistent_read),
             $this->grammar->compileExpressionAttributes($this->expression_attributes)
