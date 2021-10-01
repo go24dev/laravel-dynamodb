@@ -152,6 +152,23 @@ class Grammar extends BaseGrammer
         ];
     }
 
+    /**
+     * Compile the Limit attribute.
+     *
+     * @param int|null $limit
+     * @return array
+     */
+    public function compileScanIndexForward($bool)
+    {
+        if ($bool === null) {
+            return [];
+        }
+
+        return [
+            'ScanIndexForward' => $bool
+        ];
+    }
+
     public function compileExclusiveStartKey($key)
     {
         if (empty($key)) {
