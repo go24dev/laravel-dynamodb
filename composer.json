@@ -23,15 +23,15 @@
         "ci-test": "vendor/bin/phpunit --coverage-clover coverage.xml"
     },
     "require": {
-        "php": "^7.2|^7.3|^8.0",
-        "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
-        "illuminate/container": "^5.8|^6.0|^7.0|^8.0",
-        "illuminate/database": "^5.8|^6.0|^7.0|^8.0",
-        "illuminate/hashing": "^5.8|^6.0|^7.0|^8.0",
+        "php": "^8.0",
+        "illuminate/support": "^9.0",
+        "illuminate/container": "^9.0",
+        "illuminate/database": "^9.0",
+        "illuminate/hashing": "^9.0",
         "aws/aws-sdk-php": "^3.0"
     },
     "require-dev": {
-        "illuminate/auth": "^5.8|^6.0|^7.0|^8.0",
+        "illuminate/auth": "^9.0",
         "symfony/var-dumper": "^5.0",
         "vlucas/phpdotenv": "^4.1",
         "mockery/mockery": "^1.3",
